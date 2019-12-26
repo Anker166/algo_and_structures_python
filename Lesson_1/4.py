@@ -8,3 +8,23 @@
 то вводятся эти символы. Программа должна вывести на экран любой
 символ алфавита от 'a' до 'f' включительно.
 """
+
+from random import random
+
+print('Генерация случайного целого числа!')
+LEFT = int(input('Введите минимальное значение:\n'))
+RIGHT = int(input('Введите максимальное значение:\n'))
+NUMB = int(random() * (RIGHT - LEFT + 1)) + LEFT
+print(f'Полученное значение:\n{NUMB}')
+
+print('Генерация случайного вещественного числа!')
+LEFT = float(input('Введите минимальное значение:\n'))
+RIGHT = float(input('Введите максимальное значение:\n'))
+NUMB = round(random() * (RIGHT - LEFT) + LEFT, 3)
+print(f'Полученное значение:\n{NUMB}')
+
+print('Генерация случайного символа от "a" до "f"!')
+LEFT = input('Введите первый символ:\n').lower()
+RIGHT = input('Введите последний символ:\n').lower()
+SYMBOL = chr(int(random() * (ord(RIGHT) - ord(LEFT) + 1)) + ord(LEFT))
+print(f'Полученный символ:\n{SYMBOL}')
