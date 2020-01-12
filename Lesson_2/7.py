@@ -3,3 +3,15 @@
 натуральных чисел выполняется равенство: 1+2+...+n = n(n+1)/2,
  где n - любое натуральное число.
 """
+
+N = int(input('Введите натуральное число:\n'))
+FIRST_EQ = N * (N + 1) / 2
+i = 1
+SECOND_EQ = 0
+while i <= N:
+    SECOND_EQ += i
+    i += 1
+if FIRST_EQ == SECOND_EQ:
+    print(f'1+2+...+{N} ({SECOND_EQ}) = {N}({N}+1)/2 ({FIRST_EQ})')
+else:
+    print(f'1+2+...+{N} ({SECOND_EQ}) != {N}({N}+1)/2 ({FIRST_EQ})')
