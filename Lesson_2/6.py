@@ -5,3 +5,21 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+from random import random
+
+N = 10
+SELECT_NUM = int(random() * 100)
+while True:
+    if N == 0:
+        print('У Вас закончились попытки! Попробуйте в следующий раз!')
+        break
+    print(f'Отгадайте число от 0 до 100, загаданное компьютером! У вас есть {N} попыток!')
+    USER_NUM = int(input('Введите число:\n'))
+    if USER_NUM > SELECT_NUM:
+        print(f'Вы ввели число {USER_NUM}, оно больше загаданного.')
+    elif USER_NUM < SELECT_NUM:
+        print(f'Вы ввели число {USER_NUM}, оно меньше загаданного.')
+    elif USER_NUM == SELECT_NUM:
+        print(f'Поздравляем, Вы отгадали! Загаданное число - {SELECT_NUM}.')
+        break
+    N -= 1
