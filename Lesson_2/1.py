@@ -9,3 +9,24 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+while True:
+    F_NUM = int(input('Введите первое число:\n'))
+    S_NUM = int(input('Введите второе число:\n'))
+    SYMBOL = input('Введите знак операции - "+, -, *, /". Для выхода введите - "0".\n')
+    if SYMBOL == '+':
+        print(f'{F_NUM} + {S_NUM} = {F_NUM + S_NUM}')
+    elif SYMBOL == '-':
+        print(f'{F_NUM} - {S_NUM} = {F_NUM - S_NUM}')
+    elif SYMBOL == '*':
+        print(f'{F_NUM} * {S_NUM} = {F_NUM * S_NUM}')
+    elif SYMBOL == '/':
+        if S_NUM == 0:
+            print('Нельзя делить на ноль! Введите другой делитель.')
+        else:
+            print(f'{F_NUM} / {S_NUM} = {F_NUM / S_NUM}')
+    elif SYMBOL == '0':
+        print('Программа завершается! До свидания!')
+        break
+    else:
+        print('Вы ввели неверный символ операции!')
