@@ -5,3 +5,11 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+
+FIRST_LIST = [8, 3, 15, 6, 4, 2]
+SECOND_LIST = []
+for i in range(len(FIRST_LIST)):
+    if FIRST_LIST[i] % 2 == 0:
+        SECOND_LIST.append(i)
+print(f'Четные элементы в массиве {FIRST_LIST}\n'
+      f'стоят под номерами {SECOND_LIST}')
